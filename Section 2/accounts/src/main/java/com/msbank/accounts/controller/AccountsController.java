@@ -14,10 +14,15 @@ import com.msbank.accounts.dto.CustomerDto;
 import com.msbank.accounts.dto.ErrorResponseDto;
 import com.msbank.accounts.dto.ResponseDto;
 import com.msbank.accounts.service.IAccountsService;
-
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
