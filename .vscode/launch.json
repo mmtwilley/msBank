@@ -9,6 +9,16 @@
             "projectName": "accounts",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-LoansApplication<loans>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.msbank.loans.LoansApplication",
+            "projectName": "loans",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
