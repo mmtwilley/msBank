@@ -47,8 +47,8 @@ public class CardsController {
     @Value("${build.version}")
     private String buildVersion;
     
-//    @Autowired
-//    private Environment environment;
+    @Autowired
+    private Environment environment;
 
     @Autowired
     private CardsContactInfoDto cardsContactInfoDto;
@@ -205,31 +205,31 @@ public class CardsController {
         .body(buildVersion);
     }
 
-//    @Operation(
-//        summary = "Get Java Version",
-//        description = "Get Java versions details that is installed into accounts microservices"
-//        )
-//        @ApiResponses({
-//                @ApiResponse(
-//                        responseCode = "200",
-//                        description = "HTTP Status OK"
-//                ),
-//                @ApiResponse(
-//                        responseCode = "500",
-//                        description = "HTTP Status Internal Server Error",
-//                        content = @Content(
-//                                schema = @Schema(implementation = ErrorResponseDto.class)
-//                        )
-//                )
-//        }
-//        )
-//
-//    @GetMapping("/java-version")
-//    public ResponseEntity<String> getJavaVersion(){
-//        return ResponseEntity
-//        .status(HttpStatus.OK)
-//        .body(environment.getProperty("JAVA_HOME"));
-//    }
+    @Operation(
+        summary = "Get Java Version",
+        description = "Get Java versions details that is installed into accounts microservices"
+        )
+        @ApiResponses({
+                @ApiResponse(
+                        responseCode = "200",
+                        description = "HTTP Status OK"
+                ),
+                @ApiResponse(
+                        responseCode = "500",
+                        description = "HTTP Status Internal Server Error",
+                        content = @Content(
+                                schema = @Schema(implementation = ErrorResponseDto.class)
+                        )
+                )
+        }
+        )
+
+    @GetMapping("/java-version")
+    public ResponseEntity<String> getJavaVersion(){
+        return ResponseEntity
+        .status(HttpStatus.OK)
+        .body(environment.getProperty("JAVA_HOME"));
+    }
 
     @Operation(
             summary = "Get Contact Info",

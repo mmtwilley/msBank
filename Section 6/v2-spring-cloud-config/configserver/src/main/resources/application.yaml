@@ -8,6 +8,13 @@ spring:
     config:
       server:
         # native:
-          # search-locations: "classpath:/config"
-           #search-locations: "file:///Users//eazybytes//Documents//config"
-
+        # search-locations: "classpath:/config"
+        # search-locations: "file:///Users//eazybytes//Documents//config"
+        git:
+          uri: "https://github.com/mmtwilley/config_4_msbank.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+server:
+  port: 8071
