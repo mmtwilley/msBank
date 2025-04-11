@@ -8,7 +8,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Getter @Setter
+@Getter
+@Setter
 @ConfigurationProperties(prefix = "cards")
 public class CardsContactInfoDto{
     private String message;
